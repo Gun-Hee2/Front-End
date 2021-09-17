@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table border="1">
+    <thead>  <!-- <thead>는 생략 가능 -->
+        <tr>
+            <th></th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>
+    </thead>
+    <tbody>  <!-- <tbody>도 생략 가능 -->
+         <tr>
+             <td>1교시</td>
+             <td>영어</td>
+             <td>국어</td>
+             <td>과학</td>
+             <td>미술</td>
+             <td>기술</td>
+         </tr>
+         <tr>
+             <td>2교시</td>
+             <td>도덕</td>
+             <td>체육</td>
+             <td>영어</td>
+             <td>수학</td>
+             <td>사회</td>
+         </tr>
+    </tbody>
+
+</table>
+
+<br><br>
+
+<table border="1">
+      <col width="100"><col width="80"><col width="80"><col width="80"><col width="80"><col width="80">		
+      <tr>
+            <th></th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>
+       <tr>
+             <td>1교시</td>
+             <td>영어</td>
+             <td>국어</td>
+             <td>과학</td>
+             <td>미술</td>
+             <td>기술</td>
+         </tr>
+         <tr>
+             <td>2교시</td>
+             <td>도덕</td>
+             <td>체육</td>
+             <td>영어</td>
+             <td>수학</td>
+             <td>사회</td>
+         </tr>
+</table>
+<br><br>
+
+<div align="center">
+<table border="1" style="width: 50%">
+<caption>주소록</caption> <!-- 항상 테이블 가운데에 맞춰준다 -->
+    <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>나이</th>
+        <th colspan="2">전화번호</th> <!-- 컬럼2개를 하나로 합친다 -->
+        <!-- <th>전화번호</th> -->
+    </tr>
+    <tr>
+        <th>1</th>
+        <td>홍길동</td>
+        <td>24</td>
+        <td>134-4567</td>
+        <td>010-123-4567</td>   
+    </tr>
+    <tr>
+        <th>2</th>
+        <td>성춘향</td>
+        <td>16</td>
+        <td>234-5678</td>
+        <td>010-234-5678</td>   
+    </tr>
+</table>
+</div>
+<br><br>
+
+<table border="1">
+<tr> 
+    <th>번호</th>
+    <td>1</td>
+    
+</tr>
+<tr> 
+    <th>이름</th>
+    <td>길동</td>
+    
+</tr>
+<tr> 
+    <th>나이</th>
+    <td>24</td>
+    
+</tr>
+<tr> 
+    <th rowspan="2">전화번호</th>
+    <td>123-4567</td>
+    
+</tr>
+<tr> 
+    <!-- <th>전화번호</th> -->
+    <td>010-123-4567</td>
+    
+</tr>
+</table>
+
+</body>
+</html>
