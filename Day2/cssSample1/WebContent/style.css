@@ -1,0 +1,23 @@
+@charset "UTF-8";
+h1{
+color:red; /* color를 property*/
+}
+p{
+color:#0000ff;
+}
+
+#idcss{  /* id는 #으로 */
+font-size: 150%;
+background-color: yellow;
+color: green;
+
+}
+
+.classcss{  /* class는 .으로 */
+background-color: red;
+border: 1px solid;
+}
+
+#header > h1{ /* id가 header인 부분의 h1에 대해서 그린컬러를 줄 수 있음 */
+	color: green;
+}
