@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+    access attribute
+    
+    id     : 1개만 접근이 가능하다. (빈칸)검사, 대부분 JS용
+    class  : 다수 접근 가능, CSS에서 주로 사용
+    name   : 다수 접근 가능, 데이터 전송
+-->
+<p id="pdemo">p tag</p>
+<p id="pdemo">p tag</p>
+<br>
+
+<h3 class="hdemo">h3 tag</h3>
+<p class="hdemo">p tag</p>
+<br>
+
+<p name="pname">p tag</p>
+
+<button type="button" onclick="btnclick()">클릭</button>
+ 
+<script type="text/javascript">
+function btnclick() {
+	document.getElementById("pdemo").innerHTML = 'p 태그입니다'; // id는 여러개여도 제일 첫번째에 해당되는 id만 영향을 미친다.
+	
+//	document.getElementsByClassName('hdemo')[0].innerHTML = 'class는 hdemo'; // [0]는 class가 여러개일 때 첫번째 class에 해당된다.
+	
+//	alert(document.getElementsByClassName('hdemo').length);
+
+    let hdemo = document.getElementsByClassName('hdemo'); // 배열과 같다.
+    
+//    alert(hdemo[0].innerHTML); // 첫번째 클라스에 해당되는 태그의 값이 나온다.
+    
+    for (i = 0; i < hdemo.length; i++) {
+		hdemo[i].innerHTML = 'class는 hdemo입니다.';
+	}
+    
+    document.getElementsByName("pname")[0].innerHTML = 'pname입니다';
+    
+    document.getElementsByTagName("p")[1].innerHTML = '이것으로 결정!'; // tag가 <p>되어있는 tag중 두번째의 값이 바뀐다.
+
+
+}
+
+</script>
+ 
+ 
+ 
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+변수(Variable)
+
+<p id="demo">p tag</p>
+
+<script type="text/javascript">
+/* 
+   Integer, Double, String, Object, MyClass
+   
+   Integer in = 234;
+   String str = "hello";
+   
+   Object cls = new MyClass();
+   Object cls = new YouClass();
+
+*/
+
+/*
+var num = 123;
+var pi = 3.141592;
+var name = "홍길동";
+var str = '안녕하세요'; // 자바스크립트에서는 ''사용가능
+
+var num = 234; // var의 문제점: 변수 선언이 중복이된다. 사용하지 않는 추세.
+alert(num);
+*/
+
+let num = 123; // let은 모든 자료형으로 가능
+let pi = 3.141592;
+let name = "홍길동";
+let answer = true;
+
+num = num + 234;
+console.log(num);
+
+// Array
+// let cars = [];
+   let cars = [ "Saab", "Volvo", "Bmw"]
+   console.log(cars[1]);
+   
+   cars = new Array(3);  // 자바의 String cars[] = new String[3];과 동일하다
+   cars[0] = "사브";
+   cars[1] = "볼보";
+   cars[2] = "비엠더블유";
+   console.log(cars[2]);
+   
+   for(let i =0; i <cars.length; i++){
+	   console.log(cars[i]);
+   }
+   
+   // foreach문
+   for(car in cars){   
+	   console.log(cars[car]);
+   }
+   
+   //Object
+   
+   let obj = {
+		   firstname: '길동',  // key:value -> hashmap == Json(Web)
+		   lastname: '홍',
+		   age:24,
+		   func:function(){
+			   console.log("func 함수호출")
+			   console.log(this.lastname + this.firstname);
+		   },
+		   method:function(a, b){
+			   this.age = a;
+		   }
+		   
+   }
+   
+   console.log(obj.firstname);
+   console.log(obj.age);
+   obj.func();
+   
+   class Person{
+	   constructor(name, age){
+		   this.name = name;
+		   this.age = age;
+	   }
+	   
+	   allprint(){
+		   console.log(this.name + " " + this.age);
+	   }
+   }
+   
+   let pobj = new Person('일지매', 22);
+   console.log(pobj.name);
+   console.log(pobj.age);
+   
+   pobj.allprint();
+   
+
+
+
+</script>
+
+</body>
+</html>

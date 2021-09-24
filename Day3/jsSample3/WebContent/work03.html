@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="black">
+
+
+<h1 style="color: white">사진들</h1>
+
+
+<img id="img" src=''>
+
+<select id="selectimage" onchange="func()">
+<option>사진의 선택</option>
+<option class="1" value="pic01.jpg">항목1</option>
+<option class="2" value="pic02.jpg">항목2</option>
+<option class="3" value="pic03.jpg">항목3</option>
+<option class="4" value="pic04.jpg">항목4</option>
+</select>
+
+<script type="text/javascript">
+function func() {
+	let img = document.getElementById("img");
+	let image1 = document.getElementById("1").innerHTML;
+	let image2 = document.getElementById("2").innerHTML;
+	let image3 = document.getElementById("3").innerHTML;
+	let image4 = document.getElementById("4").innerHTML;
+	if(image1 == "항목1"){
+		document.getElementById("img").src = document.getElementById("1").value;
+	}else if(image2 == "항목2"){
+		document.getElementById("img").src = document.getElementById("2").value;
+	}else if(image3 == "항목3"){
+		document.getElementById("img").src = document.getElementById("3").value;
+	}else if(image4 == "항목4"){
+		document.getElementById("img").src = document.getElementById("4").value;
+	}
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table border="1">
+<tr>
+<td>네이버</td>
+<td id="naver">http://www.naver.com/</td>
+<td><button type="button" onclick="link1()">열기</button></td>
+</tr>
+
+<tr>
+<td>다음</td>
+<td id="daum">http://www.daum.net/</td>
+<td><button type="button" onclick="link2()">열기</button></td>
+</tr>
+
+<tr>
+<td>줌</td>
+<td id="zum">http://www.zum.com/</td>
+<td><button type="button" onclick="link3()">열기</button></td>
+</tr>
+</table>
+
+<script type="text/javascript">
+let linkn = document.getElementById("naver").innerHTML;
+let linkd = document.getElementById("daum").innerHTML;
+let linkz = document.getElementById("zum").innerHTML;
+
+function link1() {
+	location.href = linkn;
+}
+function link2() {
+	location.href = linkd;
+}
+function link3() {
+	location.href = linkz;
+}
+</script>
+
+</body>
+</html>

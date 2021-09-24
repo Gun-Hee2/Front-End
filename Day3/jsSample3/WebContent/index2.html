@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="#ffff00">
+
+<h2>여기는 index2.html입니다</h2>
+
+<input type="button" value="이전" onclick="history.back()"> <!-- 이전 페이지인 index1.html로 간다. -->
+
+<input type="button" value="현재페이지를 갱신" onclick="location.reload()"> <!-- 새로고침 기능 -->
+
+<input type="button" value="진행" onclick="history.forward()">
+
+<input type="button" onclick="gopage()" value="index3로 이동">
+
+<script type="text/javascript">
+function gopage() {
+	location.href = "index3.html";
+}
+
+
+</script>
+
+
+
+</body>
+</html>

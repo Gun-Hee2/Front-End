@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="black">
+
+<h1 style="color: white">사진들</h1>
+
+
+<!-- <p class="images"><img src='pic01.jpg'></p> -->
+
+<img id="pageimages" src="">
+
+<select id="selectimage" onchange="func()">
+<option>사진의 선택</option>
+<option value="pic01.jpg">항목1</option>
+<option value="pic02.jpg">항목2</option>
+<option value="pic03.jpg">항목3</option>
+<option value="pic04.jpg">항목4</option>
+</select>
+
+<script type="text/javascript">
+function func() {
+	let found = null;
+	let select = document.getElementById("selectimage");
+	let img = document.getElementById("pageimages");
+	for(let i = 0; i < select.length; i++){
+		if(select[i].selected == true){
+			found = select[i];
+			break;
+		}
+	}
+	
+	img.src = found.value;
+}
+
+</script>
+
+</body>
+</html>
