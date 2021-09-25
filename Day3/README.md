@@ -28,7 +28,7 @@ console.log('Java Script가 실행되었음')
 
 위와 같은 코드를 실행 시켜주면 다음과 같은 결과를 웹 브라우저를 통해 확인할 수 있다.
 
-![](../../Users/alg75/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/%EA%B1%B4%ED%9D%AC/images/scode=mtistory2&fname=https%253A%252F%252Fblog.kakaocdn.net%252Fdn%252FrdkZz%252Fbtrf1iK4a5S%252FcyX1Ol0TYG5rsQc0kOj7U0%252Fimg.png)
+![](https://user-images.githubusercontent.com/87796075/134770041-c0901cc8-f652-4989-a191-07560191f654.png)
 
 ### Variable(변수)
 
