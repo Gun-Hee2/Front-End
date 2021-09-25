@@ -19,7 +19,8 @@ function displayDate() {
 	document.getElementById("demo").innerHTML = Date();
 }
 
-//displayDate();
+//displayDate(); // 현재날짜와 시간을 알려준다.
+
 setInterval("displayDate()", 1000); // 시간이 1초씩 증가한다.
 
 
@@ -36,13 +37,13 @@ date = new Date("October 12, 2021 12:35:35");  // 2021/10/12
 
 document.getElementById("date").innerHTML = date;
 
-document.getElementById("date").innerHTML = date.getDay(); // 요일(0(일요일) ~ 6(토요일))
+/* document.getElementById("date").innerHTML = date.getDay(); // 요일(0(일요일) ~ 6(토요일))
 document.getElementById("date").innerHTML = date.getFullYear(); // 년도
 document.getElementById("date").innerHTML = date.getMonth() + 1; // 월
 document.getElementById("date").innerHTML = date.getDate(); // 날짜
 document.getElementById("date").innerHTML = date.getHours(); // 시
 document.getElementById("date").innerHTML = date.getMinutes(); // 분
-document.getElementById("date").innerHTML = date.getSeconds(); // 초
+document.getElementById("date").innerHTML = date.getSeconds(); // 초 */
 
 </script>
 

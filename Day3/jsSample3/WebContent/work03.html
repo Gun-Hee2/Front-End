@@ -14,28 +14,36 @@
 
 <select id="selectimage" onchange="func()">
 <option>사진의 선택</option>
-<option class="1" value="pic01.jpg">항목1</option>
-<option class="2" value="pic02.jpg">항목2</option>
-<option class="3" value="pic03.jpg">항목3</option>
-<option class="4" value="pic04.jpg">항목4</option>
+<option id="1" value="pic01.jpg">항목1</option>
+<option id="2" value="pic02.jpg">항목2</option>
+<option id="3" value="pic03.jpg">항목3</option>
+<option id="4" value="pic04.jpg">항목4</option>
 </select>
 
 <script type="text/javascript">
 function func() {
-	let img = document.getElementById("img");
-	let image1 = document.getElementById("1").innerHTML;
-	let image2 = document.getElementById("2").innerHTML;
-	let image3 = document.getElementById("3").innerHTML;
-	let image4 = document.getElementById("4").innerHTML;
-	if(image1 == "항목1"){
-		document.getElementById("img").src = document.getElementById("1").value;
-	}else if(image2 == "항목2"){
-		document.getElementById("img").src = document.getElementById("2").value;
-	}else if(image3 == "항목3"){
-		document.getElementById("img").src = document.getElementById("3").value;
-	}else if(image4 == "항목4"){
-		document.getElementById("img").src = document.getElementById("4").value;
+	let select = document.getElementById("selectimage");
+	let image1 = document.getElementById("1").value;
+	let image2 = document.getElementById("2").value;
+	let image3 = document.getElementById("3").value;
+	let image4 = document.getElementById("4").value;
+	let found = null;
+	for (let i = 0; i < select.length; i++) {
+		if(select[i].selected == true){
+			found = select[i];
+			break;
+		}
 	}
+	document.getElementById("img").src = found.value;
+	/* if(select[1].selected == true){
+		document.getElementById("img").src = document.getElementById("1").value;
+	}else if(select[2].selected == true){
+		document.getElementById("img").src = document.getElementById("2").value;
+	}else if(select[3].selected == true){
+		document.getElementById("img").src = document.getElementById("3").value;
+	}else if(select[4].selected == true){
+		document.getElementById("img").src = document.getElementById("4").value;
+	} */
 }
 
 </script>
