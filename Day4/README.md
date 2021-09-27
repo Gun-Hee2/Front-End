@@ -83,7 +83,7 @@ ex )
 ```json
 [
 	{
-		"name":"정수동", // JSON
+		"name":"정수동", 
 		"age":23,
 		"address":"서울시",
 		"height":181.1	
