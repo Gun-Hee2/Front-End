@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<table border="1" style="text-align: center;">
+	    <tr>
+			<th>책제목</th>
+			<td>저자</td>
+			<td>가격</td>
+			<td>발행년월일</td>
+		</tr>
+		<tr>
+			<th id="b1"></th>
+			<td id="a1"></td>
+			<td id="p1"></td>
+			<td id="d1"></td>
+		</tr>
+		<tr>
+			<th id="b2"></th>
+			<td id="a2"></td>
+			<td id="p2"></td>
+			<td id="d2"></td>
+		</tr>
+		<tr>
+			<th id="b3"></th>
+			<td id="a3"></td>
+			<td id="p3"></td>
+			<td id="d3"></td>
+		</tr>
+		<tr>
+			<th id="b4"></th>
+			<td id="a4"></td>
+			<td id="p4"></td>
+			<td id="d4"></td>
+		</tr>
+		<tr>
+			<th id="b5"></th>
+			<td id="a5"></td>
+			<td id="p5"></td>
+			<td id="d5"></td>
+		</tr>
+	</table>
+	
+<script type="text/javascript">
+let xhttp = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function () {
+	
+	if(this.readyState == 4 && this.status == 200){
+		
+		xmlFunc(this);
+	}
+}
+xhttp.open("GET", "books.xml", true);
+xhttp.send();
+
+function xmlFunc(xhttp) {
+	let title, author, price, date, xmlDoc;
+	
+	xmlDoc = xhttp.responseXML;
+	
+	title = xmlDoc.getElementsByTagName("title");
+	author = xmlDoc.getElementsByTagName("author");
+	price = xmlDoc.getElementsByTagName("price");
+	date = xmlDoc.getElementsByTagName("date");
+	
+	document.getElementById("b1").innerHTML = title[0].childNodes[0].nodeValue;
+	document.getElementById("b2").innerHTML = title[1].childNodes[0].nodeValue;
+	document.getElementById("b3").innerHTML = title[2].childNodes[0].nodeValue;
+	document.getElementById("b4").innerHTML = title[3].childNodes[0].nodeValue;
+	document.getElementById("b5").innerHTML = title[4].childNodes[0].nodeValue;
+	
+	document.getElementById("a1").innerHTML = author[0].childNodes[0].nodeValue;
+	document.getElementById("a2").innerHTML = author[1].childNodes[0].nodeValue;
+	document.getElementById("a3").innerHTML = author[2].childNodes[0].nodeValue;
+	document.getElementById("a4").innerHTML = author[3].childNodes[0].nodeValue;
+	document.getElementById("a5").innerHTML = author[4].childNodes[0].nodeValue;
+	
+	document.getElementById("p1").innerHTML = price[0].childNodes[0].nodeValue;
+	document.getElementById("p2").innerHTML = price[1].childNodes[0].nodeValue;
+	document.getElementById("p3").innerHTML = price[2].childNodes[0].nodeValue;
+	document.getElementById("p4").innerHTML = price[3].childNodes[0].nodeValue;
+	document.getElementById("p5").innerHTML = price[4].childNodes[0].nodeValue;
+	
+	document.getElementById("d1").innerHTML = date[0].childNodes[0].nodeValue;
+	document.getElementById("d2").innerHTML = date[1].childNodes[0].nodeValue;
+	document.getElementById("d3").innerHTML = date[2].childNodes[0].nodeValue;
+	document.getElementById("d4").innerHTML = date[3].childNodes[0].nodeValue;
+	document.getElementById("d5").innerHTML = date[4].childNodes[0].nodeValue;
+	
+	
+}
+
+
+</script>	
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

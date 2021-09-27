@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+
+     XML eXtensible Markup Language
+            확장       표시
+     
+     사용자 지정태그
+     목적 : 1.Data(공공의 데이터)를 공유하기 위한 목적
+           2.Setup을 하기위한 목적
+           
+     ex) 교통정보 -> 버스 번호, 정류장, 노선 -> DB에있음 
+     
+         tag data
+         번호 5-1
+         출발 강남역
+         도착 논현역
+         
+         <버스들>  root tag
+             <버스>
+                 <번호>740</번호>
+                 <출발>강남역</출발>
+                 <도착>한남동</도착>
+                 <배차간격>7분</배차간격>
+             </버스>
+         </버스들>
+         
+         
+         XML이 불편한 점이 많아서 JSON을 사용하는 추세이다.     
+
+-->
+
+<p id="demo">p tag</p>
+
+<button type="button" onclick="loadXmlDoc()">클릭</button>
+
+<script type="text/javascript">
+
+let xhttp = new XMLHttpRequest(); // xml 파일읽기 Request:요청
+
+function loadXmlDoc() {
+	xhttp.onreadystatechange = function () {  // 1
+		console.log(this.readyState);
+		console.log(this.status);
+		console.log(this.responseText);
+		
+		document.getElementById("demo").innerHTML = this.responseText; // this.responseText -> this : xhttp responseText : txt파일의 text
+	}
+	
+	xhttp.open("GET", "test.txt", true); // ("방식", "파일", 비동기처리 )
+	console.log("xhttp.open");
+	
+	xhttp.send();
+	console.log("xhttp.send");
+	
+}
+
+/*
+   readyState: 진행상태(순서)
+   0번 -> open 메소드를 수행하기 전상태
+   1번 -> loading 중...
+   2번 -> loading 완료
+   3번 -> Server 처리중...
+   4번 -> Server 처리 완료
+   
+   status 성공여부
+   200 -> success
+   403 -> 접근 금지
+   404 -> 없음, 못찾음
+   500 -> 구문(문법) 에러
+
+*/
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
