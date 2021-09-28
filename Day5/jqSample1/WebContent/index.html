@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- 
+     Java Script : client(front) 언어
+                   resource(입력창, image)의 값을 변경, 설정
+                   
+     JQuery : Java Script 경량화, 간략화
+              Ajax(비동기통신) -> RESTful방식              
+ -->
+ 
+ <script type="text/javascript">
+ /* 
+     형식 : $( tag명, id, class, name ).핸들러 함수(매개변수)
+           
+           getter, setter
+           
+           <p id="demo">p tag</p>
+           
+           let v = document.getElementById("demo").innerHTML; // getter
+            
+           document.getElementById("demo").innerHTML = "p 태그"; // setter
+           
+           <input type="text" id="name">
+           
+           let name = document.getElementById("name").value; // getter
+           
+           document.getElementById("name").value = "홍길동"; // setter
+           
+           * JQuery
+           
+           innerHTML = html(), text()
+           value = val()
+ 
+ */
+ </script>
+ 
+ <p>여기가 p 태그입니다</p>
+ 
+ <script type="text/javascript">
+ 
+ // JS
+ //let pval = document.getElementsByTagName("p")[0].innerHTML;
+ //console.log(pval);
+ 
+ // JQuery
+ let pval = $("p").html(); // getter
+ 
+ //$("p").html("Hello <b>p</b> tag"); // setter html()은 html태그 사용이 가능하다.
+ 
+ $("p").text("Hello p tag text"); // setter html()과 동일하게 setter의 역할은 할 수 있지만 html태그는 문자열로 인식하여 사용할 수 없다.
+ 
+ </script>
+ 
+<p id="demo">p tag id demo</p>
+ 
+<h3 class="cls">h3 tag class cls</h3>
+
+<p class="cls">p tag class cls</p>
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){ // document를 받고 준비되면 function()을 실행, 문서를 다읽고 실행되기 때문에 최종적으로 실행된다.
+	
+	// getter
+	let demo = $("#demo").html(); // 위에서 <p>의 id가 demo이기 때문에 #을 붙여준다.
+	console.log(demo);
+	
+	// setter
+	$("#demo").text("p tag 입니다");
+	
+	$(".cls").text("cls class 값입니다");
+	
+	//func();
+	
+	// JQuery
+	$("p").html("p 태그입니다!!!");
+});
+
+/* function func() {
+	// Java Script
+
+	let ptagArr = document.getElementsByTagName("p"); //위에 있는 모든 <p>에 해당된다.
+	for (i = 0; i < ptagArr.length; i++) {
+		ptagArr[i].innerHTML = "p 태그입니다!!!";
+	}
+} */
+
+
+
+/* // Java Script
+
+let ptagArr = document.getElementsByTagName("p"); //위에 있는 모든 <p>에 해당된다.
+for (i = 0; i < ptagArr.length; i++) {
+	ptagArr[i].innerHTML = "p 태그입니다!!!";
+}
+ */
+
+</script> 
+ 
+ 
+
+
+
+</body>
+</html>
+
+
+
+
